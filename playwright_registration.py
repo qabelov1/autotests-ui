@@ -29,4 +29,4 @@ with sync_playwright() as  playwright:
 
     page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard')
 
-    page.wait_for_timeout(10000)
+    page.wait_for_timeout(5000)
