@@ -1,5 +1,9 @@
 from playwright.sync_api import sync_playwright
+import pytest
 
+
+@pytest.mark.regress
+@pytest.mark.registration
 def test_successful_registration():
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=False)
@@ -30,4 +34,4 @@ def test_successful_registration():
 
         page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard')
 
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(10000)
